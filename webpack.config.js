@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -10,6 +11,11 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
+    alias: {
+      components: path.resolve(__dirname, 'src/Components'),
+      pages: path.resolve(__dirname, 'src/Pages'),
+      public: path.resolve(__dirname, 'public')
+    },
     extensions: [".js", ".jsx"],
   },
   module: {
@@ -23,6 +29,16 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
+      },{
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
       }
     ],
   },

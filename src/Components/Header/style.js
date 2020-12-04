@@ -1,50 +1,41 @@
-import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
-import { MdEmail, MdLocalPhone } from 'react-icons/md';
+import styled from 'styled-components';
+import { HiMenu, HiMenuAlt3 } from 'react-icons/hi';
 
-export const HeaderSection = styled.header`
+export const HeaderStyle = styled.section`
   width: 100%;
   height: 60px;
-  background-color: #132A3E;
+  background-color: transparent;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+`;
+
+export const Brand = styled.h1`
   color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 `;
 
-export const Title = styled.h1`
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 20px;
-`;
-
-export const List = styled.ul`
-  width: 40%;
-  display: flex;
-  justify-content: space-around;
-`;
-
-export const Item = styled.li`
-  list-style: none;
-`;
-
-export const Anchor = styled(Link)`
-  color: #fff;
-  text-decoration: none;
+export const BtnMenu = styled.button`
+  width: auto;
+  height: auto;
+  background-color: transparent;  
+  border: none;
+  padding: 2.5px;
   display: flex;
   align-items: center;
-  &:hover{
-    color: #019CA9;
-  }
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  
 `;
 
-const Icon = css`
-  font-size: 25px;
-`
-export const Email = styled(MdEmail)`
-  ${Icon}
+export const IconMenu = styled(HiMenu)`
+  font-size: 30px;
+  color: white;
 `;
 
-export const Phone = styled(MdLocalPhone)`
-  ${Icon}
+export const IconMenuOpen = styled(HiMenuAlt3)`
+  font-size: 30px;
+  color: white;
 `;

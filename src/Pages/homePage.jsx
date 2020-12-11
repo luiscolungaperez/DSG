@@ -5,7 +5,7 @@ import Banner from 'components/Banner/Banner'
 import Test from './test/test'
 import Sidebar from 'components/Slider/Sliderbar'
 import Header  from 'components/Header/Header';
-
+import Footer from 'components/Footer/Footer'
 
 
 const homePage = () => {
@@ -33,6 +33,7 @@ const homePage = () => {
         <Banner/>
         </Parallax>
         <Test></Test>
+        <Footer></Footer>
     </div>
     );
 }
